@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo List</title>
+  <link rel="stylesheet" href="styles/12todo.css">
+</head>
+<body>
+  <p>Todo List Practice</p>
+
+  <div class="todoGrid">
+  <input class="getValue" placeholder="Todo name" onkeydown="
+  checkEnter(event);
+  ">
+
+  <input type="date" class="getDate">
+  <button class="add" onclick="
+  addList();
+  ">Add</button>
+  </div>
+
+  <div class="container"></div>
+
+  <script src="scripts/12todo.js"></script>
+  
+</body>
+</html>

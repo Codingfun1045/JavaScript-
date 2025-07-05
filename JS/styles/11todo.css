@@ -1,0 +1,43 @@
+body{
+  font-family: Arial;
+}
+
+.add{
+  cursor: pointer;
+  background-color: green;
+  color: white;
+  padding: 10px;
+  border: none;
+}
+
+.display{
+  cursor: pointer;
+}
+
+.getValue{
+  padding: 10px;
+}
+
+.getDate{
+  padding: 10px;
+}
+
+.js-delete{
+  background-color: maroon;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.todoGrid , .container{
+  display: grid;
+  grid-template-columns: 200px 150px 100px;
+  column-gap: 10px;
+  row-gap: 5px;
+  align-items: center;
+}
+
+.todoGrid{
+  margin-bottom: 10px;
+}

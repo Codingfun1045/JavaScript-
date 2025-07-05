@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Object Exercise</title>
+</head>
+<body>
+
+  <script>
+
+    const basketball={
+      name: 'Basketball',
+      price: 2085,
+      'delivery-time': '3 days'
+    };
+
+    console.log(basketball);
+
+    basketball.price+=500;
+
+    console.log(basketball);
+    console.log(basketball.name);
+    console.log(basketball.price);
+    console.log(basketball['delivery-time']);
+
+    function comparePrice(product1,product2){
+      if(product1.price<product2.price){
+        return product1;
+      }
+      else{
+        return product2;
+      }
+    }
+
+    const product1={
+      name: 'Product 1',
+      price: 1000
+    };
+
+    const product2={
+      name: 'Product 2',
+      price:8000
+    };
+
+    const product3={
+      name: 'Product 1',
+      price: 1000
+    };
+
+    console.log(comparePrice(product1,product2));
+
+    function isSameProduct(product1,product2){
+      if(product1.name===product2.name && product1.price===product2.price){
+        return true;
+      }
+      else{
+        return false;
+      }
+    }
+
+    console.log(isSameProduct(product1,product2));
+    console.log(isSameProduct(product1,product3));
+
+    console.log('Good Morning'.toLowerCase());
+
+    console.log('Test'.repeat(2));
+
+  </script>
+</body>
+</html>

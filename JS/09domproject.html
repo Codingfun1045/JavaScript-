@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM</title>
+</head>
+<body>
+  <p class="js-paragraph">Youtube Subscribe Button</p>
+
+  <button onclick="clickButton();
+  " class="js-button">Subscribe</button>
+
+  <p class="js-paragraph1">Amazon Shipping Calculator</p>
+  <p class="js-paragraph2">Orders under $40 = +$10 shipping.</p>
+  <p class="js-paragraph3">Orders over $40 = Free shipping.</p>
+  
+  <input placeholder="Cost of order" class="js-inputField" onkeydown="
+  checkEnter(event);">
+  <button class="js-calculate" onclick="calculateCost();
+  ">Calculate</button>
+
+  <p class="printValue"></p>
+
+  <script>
+
+    function checkEnter(event){
+      if(event.key==='Enter'){
+        calculateCost();
+      }
+    }
+
+    function calculateCost(){
+      const getCost=document.querySelector('.js-inputField');
+      let inputtedCost=Number(getCost.value);
+      const value=document.querySelector('.printValue');
+
+      if(inputtedCost>=40){
+        value.innerHTML= `$${inputtedCost}`;
+      }
+      else if(inputtedCost<40 && inputtedCost>0){
+        inputtedCost+=10;
+        value.innerHTML= `$${inputtedCost}`;
+      }
+    }    
+
+    function clickButton(){
+      const buttonName=document.querySelector('.js-button');
+
+      if(buttonName.innerText==='Subscribe'){
+        buttonName.innerHTML='Subscribed';
+      }
+      else{
+        buttonName.innerHTML='Subscribe';
+      }
+    }
+  </script>
+</body>
+</html>

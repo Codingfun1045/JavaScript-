@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <button id="heads" onclick="
+    playGame('Heads');
+    ">Heads</button>
+  <button id="tails" onclick="
+    playGame('Tails');
+    ">Tails</button>
+  
+  <script>
+    // const hour=14;
+    // const name='Shivanuj';
+    // const age=4;
+    // const isHoliday=true;
+
+    const score= JSON.parse(localStorage.getItem('scores')) || {
+      Wins: 0,
+      Losses: 0
+    };
+
+    function playGame(guess){
+    const randomNumber=Math.random();
+    let result='';
+
+    if(randomNumber<0.5){
+      result='Heads';
+      // console.log('Heads');
+    }
+    else{
+      result='Tails';
+      // console.log('Tails');
+    }
+    
+    if(guess===result){
+      console.log('You Win!');
+      console.log(`Score: Wins:${score.Wins+=1}`);
+
+    }
+    else{
+      console.log('You lose!');
+      console.log(`Score: Losses:${score.Losses+=1}`);
+    }
+
+    console.log(score);
+    localStorage.setItem('scores',JSON.stringify(score));
+  }
+
+    // if(guess===result){
+    //   console.log('You Win!');
+    // }
+    // else{
+    //   console.log('You lose!');
+    // }
+
+    // result=randomNumber<0.5?'Heads':'Tails';
+
+    // guess===result? console.log('You Win!') : console.log('You Lose!');
+
+    // && has a higher priority than || so for
+    // this to work correctly, we need to add
+    // brackets () around the || check to make
+    // sure that it gets done first.
+
+    // if(!isHoliday && (age<=6 || age>=65)){
+    //   console.log('Discount');
+    // }
+    // else{
+    //   console.log('No Discount');
+    // }
+
+    // if(hour>=6 && hour<=12){
+    //   console.log(`Good Morning! ${name}`);
+    // }
+    // else if(hour>=13 && hour<=17){
+    //   console.log(`Good Afternoon! ${name}`);
+    // }
+    // else{
+    //   console.log(`Good Night! ${name}`);
+    // }
+  </script>
+</body>
+</html>

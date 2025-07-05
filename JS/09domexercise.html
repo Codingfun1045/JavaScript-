@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Exercise</title>
+</head>
+<body>
+  <button class="js-clickButton">9a</button>
+  <button class="js-clickButtonTwo">9b</button>
+
+  <button class="js-heads" onclick="
+    document.querySelector('.js-choice').innerHTML='You choose : Heads.';">Heads</button>
+  <button class="js-tails" onclick="
+    document.querySelector('.js-choice').innerHTML='You choose : Tails.';">Tails</button>
+
+<p class="js-choice"></p>
+
+    <br><br>
+
+    <input class="js-input" onkeydown="
+    selectEnter(event);">
+    <button class="js-submit" onclick="
+    retrieveInputData();">Submit</button>
+
+    <p class="js-submitField"></p>
+
+
+    <script>
+      const buttonName=document.querySelector('.js-clickButton')
+      console.log(buttonName);
+
+      const buttonNameTwo=document.querySelector('.js-clickButtonTwo');
+      buttonNameTwo.innerHTML='9b done';
+
+      function retrieveInputData(){
+      const submitData=document.querySelector('.js-input').value;
+      document.querySelector('.js-submitField').innerHTML=`Your name is : ${submitData}`;
+      }
+
+      function selectEnter(event){
+        if(event.key==='Enter'){
+          retrieveInputData();
+        }
+      }
+      
+    </script>
+</body>
+</html>

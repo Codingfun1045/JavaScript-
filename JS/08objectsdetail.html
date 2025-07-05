@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Objects Detail</title>
+</head>
+<body>
+
+  <script>
+    const product2={
+      name:'Shirt',
+      'delivery-time':10,
+      rating:{
+        stars:4.5,
+        count:574
+      },
+      fun: function function1(){
+        console.log('Function inside an Object');
+      }
+    };
+
+    console.log(product2.name);
+    console.log(product2['delivery-time']);
+    console.log(product2.rating.stars);
+    console.log(product2.rating.count);
+    product2.fun();
+
+    const jsonString=JSON.stringify(product2);
+    console.log(jsonString);
+
+    console.log(JSON.parse(jsonString));
+
+    localStorage.setItem('messages','Hello!');
+
+    console.log(localStorage.getItem('messages'));
+
+    const object4={
+      message:'Good Job!',
+      price:874,
+      quantity:24,
+      shop:'Butwal'
+    }
+
+    const {message,price,quantity,shop}=object4;
+    console.log(message);
+    console.log(price);
+    console.log(quantity);
+    console.log(shop);
+
+    const object5={
+      message,
+      methodObject(){
+        console.log('method');
+      }
+    }
+
+    console.log(object5.message);
+    object5.methodObject();
+
+  </script>
+</body>
+</html>

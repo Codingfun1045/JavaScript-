@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+</head>
+
+<body>
+  <div id="calculator">
+    <br><br>
+    <p>
+      <button id="one" onclick="calculation+='1';
+    console.log(calculation);">1</button>
+      <button id="two" onclick="calculation+='2';
+    console.log(calculation);">2</button>
+      <button id="three" onclick="calculation+='3';
+    console.log(calculation);">3</button>
+      <button id="plus" onclick="calculation+=' + ';
+    console.log(calculation);">+</button>
+    </p>
+
+    <p>
+      <button id="one" onclick="calculation+='4';
+    console.log(calculation);">4</button>
+      <button id="two" onclick="calculation+='5';
+    console.log(calculation);">5</button>
+      <button id="three" onclick="calculation+='6';
+    console.log(calculation);">6</button>
+      <button id="plus" onclick="calculation+=' - ';
+    console.log(calculation);">-</button>
+    </p>
+
+    <p>
+      <button id="one" onclick="calculation+='7';
+    console.log(calculation);">7</button>
+      <button id="two" onclick="calculation+='8';
+    console.log(calculation);">8</button>
+      <button id="three" onclick="calculation+='9';
+    console.log(calculation);">9</button>
+      <button id="plus" onclick="calculation+=' * ';
+    console.log(calculation);">*</button>
+    </p>
+
+    <p>
+      <button id="one" onclick="calculation+='0';
+    console.log(calculation);">0</button>
+      <button id="two" onclick="calculation+='.';
+    console.log(calculation);">.</button>
+      <button id="equalsto" onclick="
+    // Note: eval() takes a string and runs it as code.
+    // Avoid using eval() in real world projects since
+    // it can potentially be given harmful code to run.
+    // Only use eval() for learning purposes.
+    calculation=eval(calculation);
+    console.log(calculation);">=</button>
+      <button id="three" onclick="calculation+='/';
+    console.log(calculation);">/</button>
+    </p>
+
+    <p>
+      <button id="clear" onclick="calculation='';
+      console.log('Cleared.');">Clear</button>
+    </p>
+  </div>
+
+  <script>
+    let calculation = '';
+  </script>
+</body>
+
+</html>

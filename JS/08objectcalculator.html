@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+</head>
+
+<body>
+  <div id="calculator">
+    <br><br>
+    <p>
+      <button id="one" onclick="
+      calculationMethod('1');
+      ">1</button>
+      <button id="two" onclick="
+      calculationMethod('2');">2</button>
+      <button id="three" onclick="
+      calculationMethod('3');">3</button>
+      <button id="plus" onclick="
+      calculationMethod(' + ');">+</button>
+    </p>
+
+    <p>
+      <button id="one" onclick="
+        calculationMethod('4');">4</button>
+      <button id="two" onclick="
+      calculationMethod('5');">5</button>
+      <button id="three" onclick="
+      calculationMethod('6');">6</button>
+      <button id="plus" onclick="
+      calculationMethod(' - ');">-</button>
+    </p>
+
+    <p>
+      <button id="one" onclick="
+      calculationMethod('7');">7</button>
+      <button id="two" onclick="
+      calculationMethod('8');">8</button>
+      <button id="three" onclick="
+      calculationMethod('9');">9</button>
+      <button id="plus" onclick="
+      calculationMethod(' * ');">*</button>
+    </p>
+
+    <p>
+      <button id="one" onclick="
+      calculationMethod('0');">0</button>
+      <button id="two" onclick="
+      calculationMethod(' . ');">.</button>
+      <button id="equalsto" onclick="
+    // Note: eval() takes a string and runs it as code.
+    // Avoid using eval() in real world projects since
+    // it can potentially be given harmful code to run.
+    // Only use eval() for learning purposes.
+    calculation=eval(calculation);
+    console.log(calculation);
+    
+    localStorage.setItem('score',calculation);
+    ">=</button>
+      <button id="three" onclick="
+      calculationMethod(' / ');">/</button>
+    </p>
+
+    <p>
+      <button id="clear" onclick="
+      calculation='';
+      console.log('Cleared.');
+      
+      localStorage.setItem('score',calculation);
+      ">Clear</button>
+    </p>
+  </div>
+
+  <script>
+    let calculation= localStorage.getItem('store') || '';
+
+    function calculationMethod(value){
+      calculation+=value;
+      console.log(calculation);
+
+      localStorage.setItem('store',calculation);
+    }
+  </script>
+</body>
+
+</html>
